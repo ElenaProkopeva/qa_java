@@ -2,7 +2,7 @@ package com.example;
 
 import java.util.List;
 
-public class Animal {
+public class Animal implements FelineMethods {
 
     public List<String> getFood(String animalKind) throws Exception {
         if ("Травоядное".equals(animalKind)) {
