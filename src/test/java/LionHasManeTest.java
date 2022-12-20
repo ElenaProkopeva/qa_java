@@ -3,10 +3,12 @@ import com.example.Lion;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
+
 import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
 public class LionHasManeTest {
+
     String sex;
     boolean isLionHasMane;
 
@@ -14,8 +16,9 @@ public class LionHasManeTest {
         this.sex = sex;
         this.isLionHasMane = isLionHasMane;
     }
-    @Parameterized.Parameters
-    public static Object[][] lionData(){
+
+    @Parameterized.Parameters(name = "{index}:Лев с sex = {0} имеет гриву = {1}")
+    public static Object[][] lionData() {
         return new Object[][]{
                 {"Самец", true},
                 {"Самка", false},
@@ -24,7 +27,7 @@ public class LionHasManeTest {
     }
 
     @Test
-    public void isLionHasManeTest(){
+    public void isLionHasManeTest() {
         Feline feline = new Feline();
         try {
             Lion lion = new Lion(sex, feline);

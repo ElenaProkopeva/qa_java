@@ -6,11 +6,12 @@ import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
-import java.util.List;
 
+import java.util.List;
 
 @RunWith(MockitoJUnitRunner.class)
 public class LionTest {
+
     @Mock
     Feline feline;
 
@@ -27,5 +28,4 @@ public class LionTest {
         Mockito.when(feline.getFood("Хищник")).thenReturn(List.of("Животные", "Птицы", "Рыба"));
         Assert.assertEquals("Метод getFood() работает неверно", List.of("Животные", "Птицы", "Рыба"), lion.getFood());
     }
-
 }
