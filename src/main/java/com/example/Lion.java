@@ -3,9 +3,10 @@ package com.example;
 import java.util.List;
 
 public class Lion {
-    boolean hasMane;
-    Predator predator;
-    FelineMethods felineMethods;
+
+    private final boolean hasMane;
+    private final Predator predator;
+    private final FelineMethods felineMethods;
 
     public Lion(String sex, Feline feline) throws Exception {
         this.predator = feline;
@@ -19,7 +20,6 @@ public class Lion {
         }
     }
 
-
     public int getKittens() {
         return predator.getKittens();
     }
@@ -31,5 +31,4 @@ public class Lion {
     public List<String> getFood() throws Exception {
         return felineMethods.getFood("Хищник");
     }
-
 }

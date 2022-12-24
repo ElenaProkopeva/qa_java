@@ -10,6 +10,7 @@ import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
 public class FelineFoodTest {
+
     String animalKind;
     List<String> foods;
 
@@ -19,7 +20,7 @@ public class FelineFoodTest {
     }
 
     @Parameterized.Parameters
-    public static Object[][] felineData(){
+    public static Object[][] felineData() {
         return new Object[][]{
                 {"Травоядное", List.of("Трава", "Различные растения")},
                 {"Хищник", List.of("Животные", "Птицы", "Рыба")},
@@ -28,7 +29,7 @@ public class FelineFoodTest {
     }
 
     @Test
-    public void isLionHasManeTest(){
+    public void isLionHasManeTest() {
         try {
             Feline feline = new Feline();
             assertEquals("Метод getFood() работает неверно!", foods, feline.getFood(animalKind));
